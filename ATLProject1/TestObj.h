@@ -64,6 +64,11 @@ public:
 
 
 
+    STDMETHOD(get_TestProp)(LONG* pVal);
+    STDMETHOD(put_TestProp)(LONG newVal);
+
+private:
+    LONG mTestProp;
 };
 
 OBJECT_ENTRY_AUTO(__uuidof(TestObj), CTestObj)

@@ -16,5 +16,21 @@ namespace Tests
           var obj = new TestObj();
           Assert.NotNull(obj);
       }
+
+      [Fact]
+      public void testobj_get_set_testprop()
+      {
+          const int expected = 2;
+
+          var obj = new TestObj();
+          obj.TestProp = expected;
+
+          Assert.Equal(expected, obj.TestProp);
+      }
+
+      public void testobj_get_LPCWSTR_prop()
+      {
+          var obj = new TestObj();
+      }
   }
 }

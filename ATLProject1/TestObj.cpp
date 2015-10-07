@@ -20,3 +20,19 @@ STDMETHODIMP CTestObj::InterfaceSupportsErrorInfo(REFIID riid)
 	}
 	return S_FALSE;
 }
+
+
+STDMETHODIMP CTestObj::get_TestProp(LONG* pVal)
+{
+    *pVal = mTestProp;
+
+    return S_OK;
+}
+
+
+STDMETHODIMP CTestObj::put_TestProp(LONG newVal)
+{
+    mTestProp = newVal;
+
+    return S_OK;
+}

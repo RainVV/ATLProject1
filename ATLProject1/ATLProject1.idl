@@ -15,6 +15,8 @@ import "ocidl.idl";
 	pointer_default(unique)
 ]
 interface ITestObj : IDispatch{
+    [propget, id(1)] HRESULT TestProp([out, retval] LONG* pVal);
+    [propput, id(1)] HRESULT TestProp([in] LONG newVal);
 };
 [
 	uuid(FF96CDB1-DD50-44BF-BF46-32E62D8D916A),
