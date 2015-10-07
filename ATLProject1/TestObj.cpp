@@ -3,7 +3,6 @@
 #include "stdafx.h"
 #include "TestObj.h"
 
-
 // CTestObj
 
 STDMETHODIMP CTestObj::InterfaceSupportsErrorInfo(REFIID riid)
@@ -33,6 +32,43 @@ STDMETHODIMP CTestObj::get_TestProp(LONG* pVal)
 STDMETHODIMP CTestObj::put_TestProp(LONG newVal)
 {
     mTestProp = newVal;
+
+    return S_OK;
+}
+
+
+STDMETHODIMP CTestObj::get_TestStringProp(LPCWSTR* pVal)
+{
+    *pVal = L"Test string";
+
+    return S_OK;
+}
+
+
+STDMETHODIMP CTestObj::put_TestStringProp(LPCWSTR newVal)
+{
+    // TODO: Add your implementation code here
+
+    return S_OK;
+}
+
+
+STDMETHODIMP CTestObj::get_TestStringProp2(BSTR* pVal)
+{
+    _bstr_t bstr1(_T("Test string"));
+    BSTR bstr;
+
+    bstr = bstr1.copy();
+
+    *pVal = bstr;
+
+    return S_OK;
+}
+
+
+STDMETHODIMP CTestObj::put_TestStringProp2(BSTR newVal)
+{
+    // TODO: Add your implementation code here
 
     return S_OK;
 }

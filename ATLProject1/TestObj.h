@@ -69,6 +69,11 @@ public:
 
 private:
     LONG mTestProp;
+public:
+    STDMETHOD(get_TestStringProp)(LPCWSTR* pVal);
+    STDMETHOD(put_TestStringProp)(LPCWSTR newVal);
+    STDMETHOD(get_TestStringProp2)(BSTR* pVal);
+    STDMETHOD(put_TestStringProp2)(BSTR newVal);
 };
 
 OBJECT_ENTRY_AUTO(__uuidof(TestObj), CTestObj)

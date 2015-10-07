@@ -17,6 +17,10 @@ import "ocidl.idl";
 interface ITestObj : IDispatch{
     [propget, id(1)] HRESULT TestProp([out, retval] LONG* pVal);
     [propput, id(1)] HRESULT TestProp([in] LONG newVal);
+    [propget, id(2)] HRESULT TestStringProp([out, retval] LPCWSTR* pVal);
+    [propput, id(2)] HRESULT TestStringProp([in] LPCWSTR newVal);
+    [propget, id(3)] HRESULT TestStringProp2([out, retval] BSTR* pVal);
+    [propput, id(3)] HRESULT TestStringProp2([in] BSTR newVal);
 };
 [
 	uuid(FF96CDB1-DD50-44BF-BF46-32E62D8D916A),

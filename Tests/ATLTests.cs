@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ATLProject1Lib;
 using Xunit;
+using Xunit.Sdk;
 
 namespace Tests
 {
@@ -28,9 +29,20 @@ namespace Tests
           Assert.Equal(expected, obj.TestProp);
       }
 
+      //[Fact]
       public void testobj_get_LPCWSTR_prop()
       {
           var obj = new TestObj();
+
+          Assert.Equal("Test string", obj.TestStringProp);
+      }
+
+      [Fact]
+      public void testobj_get_BSTR_prop()
+      {
+          var obj = new TestObj();
+
+          Assert.Equal("Test string", obj.TestStringProp2);
       }
   }
 }
