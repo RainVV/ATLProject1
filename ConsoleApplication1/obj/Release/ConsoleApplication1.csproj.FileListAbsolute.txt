@@ -1,5 +1,0 @@
-C:\Users\chpink\Home\sandbox\ATLProject1\ConsoleApplication1\bin\Release\ConsoleApplication1.exe.config
-C:\Users\chpink\Home\sandbox\ATLProject1\ConsoleApplication1\bin\Release\ConsoleApplication1.exe
-C:\Users\chpink\Home\sandbox\ATLProject1\ConsoleApplication1\bin\Release\ConsoleApplication1.pdb
-C:\Users\chpink\Home\sandbox\ATLProject1\ConsoleApplication1\obj\Release\ConsoleApplication1.exe
-C:\Users\chpink\Home\sandbox\ATLProject1\ConsoleApplication1\obj\Release\ConsoleApplication1.pdb
