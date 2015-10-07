@@ -30,6 +30,7 @@ class ATL_NO_VTABLE CTestObj :
 public:
 	CTestObj()
 	{
+        mTestStringProp2 = L"Test string";
 	}
 
 DECLARE_REGISTRY_RESOURCEID(IDR_TESTOBJ)
@@ -69,6 +70,7 @@ public:
 
 private:
     LONG mTestProp;
+    LPCWSTR mTestStringProp2;
 public:
     STDMETHOD(get_TestStringProp)(LPCWSTR* pVal);
     STDMETHOD(put_TestStringProp)(LPCWSTR newVal);

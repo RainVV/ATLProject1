@@ -44,5 +44,16 @@ namespace Tests
 
           Assert.Equal("Test string", obj.TestStringProp2);
       }
+
+      [Fact]
+      public void testobj_get_set_BSTR_prop()
+      {
+          const string expected = "Test set string";
+
+          var obj = new TestObj();
+          obj.TestStringProp2 = expected;
+
+          Assert.Equal(expected, obj.TestStringProp2);
+      }
   }
 }

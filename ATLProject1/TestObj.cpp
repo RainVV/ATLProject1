@@ -55,7 +55,7 @@ STDMETHODIMP CTestObj::put_TestStringProp(LPCWSTR newVal)
 
 STDMETHODIMP CTestObj::get_TestStringProp2(BSTR* pVal)
 {
-    _bstr_t bstr1(_T("Test string"));
+    _bstr_t bstr1(mTestStringProp2);
     BSTR bstr;
 
     bstr = bstr1.copy();
@@ -68,7 +68,13 @@ STDMETHODIMP CTestObj::get_TestStringProp2(BSTR* pVal)
 
 STDMETHODIMP CTestObj::put_TestStringProp2(BSTR newVal)
 {
-    // TODO: Add your implementation code here
+    _bstr_t bstrStart(newVal);
+
+    mTestStringProp2 = (LPCWSTR)bstrStart;
+
+    /*CString s;
+
+    s.Format(_T("%s"), (LPCTSTR)bstrStart);*/
 
     return S_OK;
 }

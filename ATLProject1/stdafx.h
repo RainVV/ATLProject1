@@ -25,3 +25,4 @@
 #include <atlctl.h>
 
 #include <comdef.h>
+#include <atlstr.h>
